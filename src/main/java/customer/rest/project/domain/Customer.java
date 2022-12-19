@@ -38,6 +38,10 @@ public class Customer {
 		this.phone = phone;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -101,6 +105,7 @@ public class Customer {
 	public void setTrainings(List<Training> trainings) {
 		this.trainings = trainings;
 	}
+
 	
 	
 	
