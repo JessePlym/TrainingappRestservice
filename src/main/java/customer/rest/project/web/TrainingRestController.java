@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import customer.rest.project.domain.CustomerRepository;
 import customer.rest.project.domain.Training;
 import customer.rest.project.domain.TrainingRepository;
 
@@ -21,9 +21,6 @@ public class TrainingRestController {
 
 	@Autowired
 	private TrainingRepository trainingRepository;
-
-	@Autowired
-	private CustomerRepository customerRepository;
 
 	// get all training
 	@GetMapping("/trainings")
@@ -41,5 +38,10 @@ public class TrainingRestController {
 	@PostMapping("/trainings")
 	public void saveTrainings(@RequestBody Training training) {
 		trainingRepository.save(training);
+	}
+
+	@DeleteMapping("/trainings/{id}")
+	public void deleteTraining(@PathVariable(name = "id") Long id) {
+		trainingRepository.deleteById(id);
 	}
 }
