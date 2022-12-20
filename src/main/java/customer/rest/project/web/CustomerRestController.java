@@ -40,10 +40,10 @@ public class CustomerRestController {
 		return (Customer) customerRepository.findById(id).get();
 	}
 
-	// save new customers
+	// save new customer
 	@PostMapping("/customers")
-	public void saveCustomers(@RequestBody List<Customer> customers) {
-		customerRepository.saveAll(customers);
+	public void saveCustomers(@RequestBody Customer customer) {
+		customerRepository.save(customer);
 	}
 
 	// delete one customer
