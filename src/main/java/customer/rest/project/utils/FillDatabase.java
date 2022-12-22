@@ -27,11 +27,11 @@ public class FillDatabase {
 		cRepo.deleteAll();
 		tRepo.deleteAll();
 
-		Customer cust1 = new Customer("Jesse", "Plymander", "Kirvuntie 1", "02600", "Espoo", "j.p@mail.com",
+		Customer cust1 = new Customer("Jaska", "Nylander", "Kirvuntie 1", "02600", "Espoo", "j.p@mail.com",
 				"0451101127");
 		Customer cust2 = new Customer("Tikru", "Kissanen", "Asematie 1", "02700", "Kauniainen", "t.k@mail.com",
 				"0451101128");
-		Customer cust3 = new Customer("Aliisa", "Gröna", "Puolakantie 19", "00540", "Helsinki", "a.g@mail.com",
+		Customer cust3 = new Customer("Alice", "Haafs", "Puolakantie 19", "00540", "Helsinki", "a.g@mail.com",
 				"0451101129");
 		Customer cust4 = new Customer("Matti", "Meikäläinen", "Rauhankatu 82", "00840", "Helsinki", "m.m@mail.com",
 				"0451101120");
